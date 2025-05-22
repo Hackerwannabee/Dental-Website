@@ -1,3 +1,11 @@
+function showTab(id) {
+  document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+
+  document.getElementById(id).style.display = 'block';
+  event.target.classList.add('active');
+}
+
 let promoIndex = 0;
 let promoSlides = [];
 
@@ -7,7 +15,6 @@ function showPromoSlides() {
   promoSlides[promoIndex].classList.add('active');
 }
 
-// ✅ Hasil slideshow (before-after)
 let hasilIndex = 0;
 let hasilSlides = [];
 
@@ -17,7 +24,6 @@ function showHasilSlides() {
   hasilSlides[hasilIndex].classList.add('active');
 }
 
-// ✅ Inisialisasi saat halaman selesai dimuat
 window.onload = () => {
   promoSlides = document.querySelectorAll('.promo-slide');
   hasilSlides = document.querySelectorAll('.hasil-slide');
@@ -27,6 +33,4 @@ window.onload = () => {
 
   setInterval(showPromoSlides, 2000);
   setInterval(showHasilSlides, 2000);
-};
-
-
+}
