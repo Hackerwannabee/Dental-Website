@@ -1,0 +1,17 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = htmlspecialchars($_POST["name"]);
+  $phone = htmlspecialchars($_POST["phone"]);
+  $birthdate = $_POST["birthdate"];
+  $appointment = $_POST["appointment"];
+
+  $data = "Name: $name\nPhone: $phone\nBirth Date: $birthdate\nAppointment: $appointment\n\n";
+
+  file_put_contents("applications.txt", $data, FILE_APPEND);
+
+  echo "<h2>Thank you, $name. Your application has been submitted!</h2>";
+  echo "<a href='index.html'>Back to form</a>";
+} else {
+  echo "Invalid request.";
+}
+?>

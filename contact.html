@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="">Home</a></li>
+                <li><a href="about.html" class="">Tentang kami</a></li>
+                <li><a href="service.html">Servis</a></li>
+                <li><a href="product.html" class="">Produk</a></li>
+                <li><a href="contact.html" class="active">Kontak Kami</a></li>
+                <li><a href="all-articles.php">Artikel</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="kontak-wrapper">
+        <div class="kontak-container">
+          <!-- Kiri: Gambar -->
+          <div class="kontak-gambar">
+            <img src="/assets/images/fasilitas1.jpg" alt="Ruangan Klinik">
+          </div>
+      
+          <!-- Kanan: Info dan Map -->
+          <div class="kontak-info">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3847111090174!2d106.62504761476982!3d-6.211544995506361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb7f597bb3e3%3A0xd84c2e9d5dcf70d3!2sSummarecon%20Mall%20Serpong!5e0!3m2!1sen!2sid!4v1666745532261!5m2!1sen!2sid"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="responsive-map">
+            </iframe>
+      
+            <p><strong>Lokasi:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus sollicitudin tellus id sagittis. Morbi in est magna.</p>
+      
+            <p>📧 username@gmail.com</p>
+            <p>📞 +62 813 4567 8902</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus finibus?</span>
+            <span class="faq-arrow">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus sollicitudin tellus id sagittis. Morbi in est magna. Donec vitae urna hendrerit, ultrices diam ac, sagittis leo.</p>
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Bagaimana cara booking treatment?</span>
+            <span class="faq-arrow">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Kamu bisa booking lewat WhatsApp, form online, atau langsung ke klinik. Kami siap bantu!</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus finibus?</span>
+              <span class="faq-arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus sollicitudin tellus id sagittis. Morbi in est magna. Donec vitae urna hendrerit, ultrices diam ac, sagittis leo.</p>
+            </div>
+          </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Bagaimana cara booking treatment?</span>
+              <span class="faq-arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p>Kamu bisa booking lewat WhatsApp, form online, atau langsung ke klinik. Kami siap bantu!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus finibus?</span>
+              <span class="faq-arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus sollicitudin tellus id sagittis. Morbi in est magna. Donec vitae urna hendrerit, ultrices diam ac, sagittis leo.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              <span>Bagaimana cara booking treatment?</span>
+              <span class="faq-arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p>Kamu bisa booking lewat WhatsApp, form online, atau langsung ke klinik. Kami siap bantu!</p>
+            </div>
+          </div>
+      
+        <!-- Tambahkan FAQ-item lain sesuai kebutuhan -->
+      </section>
+
+      <section class="tips-konsultasi-container">
+        <!-- KIRI -->
+        <div class="tips-section">
+          <h3 class="form-title">Punya Pertanyaan Untuk Kami?</h3>
+        </div>
+      
+        <!-- KANAN -->
+        <div class="konsultasi-card">
+          <form id="form-kontak" class="form-kontak">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+      
+            <label for="telp">No. Telp</label>
+            <input type="tel" id="telp" name="telp" required />
+      
+            <label for="pesan">Message</label>
+            <textarea id="pesan" name="pesan" rows="4" required></textarea>
+      
+            <button type="submit" class="btn-kirim">KIRIM</button>
+          </form>
+        </div>
+      </section>
+      
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h4>Alamat</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus sollicitudin tellus id sagittis. Morbi in est magna.</p>
+          </div>
+          <div class="footer-column">
+            <h4>Waktu Operasional</h4>
+            <p>Hari - Hari: 09.00 - 20.00<br>Hari: 09.00 - 17.00</p>
+          </div>
+          <div class="footer-column">
+            <h4>Kontak Kami</h4>
+            <p>Instagram<br>Sosial Media<br>Sosial Media</p>
+          </div>
+        </div>
+    </footer>
+
+    <script src="/js/contact.js"></script>
+</body>
+</html>

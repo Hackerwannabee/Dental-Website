@@ -1,0 +1,461 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #fff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 15px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav ul li {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  nav ul li a {
+    color: #005221;
+    text-decoration: none;
+    padding: 8px 16px;
+  }
+  
+  nav ul li a.active {
+    font-weight: bold;
+    position: relative;
+  }
+  
+  nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 4px;
+    background-color: rgba(0, 128, 0, 0.3);
+    border-radius: 2px;
+  }
+  
+  .header-banner {
+    width: 100%;
+    height: 180px;
+    background-image: url('/assets/images/fasilitas2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f5f0;
+    padding: 1rem 0;
+    border-radius: 12px 12px 0 0;
+    gap: 0.5rem;
+  }
+  
+  .tab {
+    padding: 0.8rem 2rem;
+    background: linear-gradient(to right, #cde9d4, #d4e5cd);
+    border: none;
+    font-weight: bold;
+    color: #1f4e2f;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .tab:hover {
+    background: linear-gradient(to right, #b6dec2, #cde9d4);
+    transform: translateY(-2px);
+  }
+  
+  .tab.active {
+    background: white;
+    border-bottom: 3px solid white;
+    color: #004d1a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .tab-content {
+    padding: 40px 20px;
+    background-color: #fff;
+  }
+  
+  /* Tambahan CSS lainnya (konten, treatment, alat, konsultasi, footer) dapat kamu salin dari file sebelumnya */
+  .content-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+    justify-content: space-between;
+  }
+  
+  .content-left {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #024b20;
+    font-size: large;
+  }
+  
+  .content-right {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .promo-section h3,
+  .hasil-section h3 {
+    color: #024b20;
+    margin-bottom: 10px;
+  }
+  
+  .promo-slideshow,
+  .hasil-slideshow {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0d8;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  
+  .promo-slide,
+  .hasil-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+  
+  .promo-slide.active,
+  .hasil-slide.active {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .hasil-slide img {
+    width: 48%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* ✅ Responsive */
+  @media (max-width: 768px) {
+    .content-section {
+      flex-direction: column;
+      padding: 20px;
+    }
+}
+
+.treatment{
+    text-align: left;
+    margin-left: 100px;
+    font-size: xx-large;
+    color: #005221;
+}
+
+.treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    padding: 40px;
+  }
+  
+  .treatment-card {
+    display: flex;
+    gap: 20px;
+    border: 2px solid #024b20;
+    border-radius: 20px;
+    padding: 20px;
+    align-items: flex-start;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .treatment-image {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 16px;
+    flex-shrink: 0;
+  }
+  
+  .treatment-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .treatment-content h3 {
+    font-size: 20px;
+    margin: 0 0 5px;
+    color: #024b20;
+  }
+  
+  .treatment-time {
+    font-size: 14px;
+    font-style: italic;
+    color: #999;
+  }
+  
+  .treatment-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #024b20;
+    line-height: 1.5;
+  }
+  
+  .treatment-icon {
+    align-self: flex-end;
+    width: 30px;
+  }
+
+  @media (max-width: 600px) {
+    .treatment-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .treatment-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .treatment-content {
+      align-items: center;
+    }
+  
+    .treatment-icon {
+      margin-top: 10px;
+    }
+  }
+
+  .alat-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1290px;
+    max-height: 350px;
+    margin: 0 auto;
+  }
+  
+  .alat-card {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background: linear-gradient(to right, #03582c, #e0e0e0);
+  }
+  
+  .alat-content {
+    flex: 1;
+    padding: 30px;
+    color: white;
+    background: linear-gradient(to right, #03582c, transparent);
+  }
+  
+  .alat-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .alat-content p {
+    font-size: 16px;
+  }
+  
+  .alat-image {
+    width: 50%;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .alat-card {
+      flex-direction: column;
+    }
+  
+    .alat-image {
+      width: 100%;
+      height: 200px;
+    }
+  
+    .alat-content {
+      text-align: center;
+    }
+  }
+  
+  .tips-konsultasi-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f2f5e9;
+    justify-content: center; /* ➤ Tengah horizontal */
+    align-items: flex-start; /* ➤ Awal vertikal */
+    text-align: left;
+  }
+  
+  .tips-section {
+    flex: 1 1 500px;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+  
+  .tips-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #004d1a;
+    margin-bottom: 1rem;
+  }
+  
+  .tips-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #005522;
+    line-height: 1.8;
+    font-size: larger;
+  }
+  
+  .tips-list li::marker {
+    color: #007000;
+  }
+  
+  /* Konsultasi Card */
+  .konsultasi-card {
+    flex: 1 1 400px;
+    max-width: 400px;
+    border: 2px solid #1f4e2f;
+    border-radius: 20px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .konsultasi-img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .konsultasi-content h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+  }
+  
+  .konsultasi-content .highlight {
+    font-weight: bold;
+    color: #1f4e2f;
+  }
+  
+  .konsultasi-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    color: #444;
+  }
+  
+  .btn-konsultasi {
+    display: inline-block;
+    background: linear-gradient(to right, #fcd12a, #f1b600);
+    color: #1f4e2f;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  .btn-konsultasi:hover {
+    background: linear-gradient(to right, #f1b600, #fcd12a);
+  }
+  
+  /* 📱 Responsiveness Mobile */
+  @media (max-width: 768px) {
+    .tips-konsultasi-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .tips-section,
+    .konsultasi-card {
+      max-width: 100%;
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .tips-title {
+      text-align: center;
+    }
+  
+    .tips-list {
+      text-align: left;
+      margin: 0 auto;
+      max-width: 90%;
+    }
+  }
+  
+  
+
+.footer {
+    background: linear-gradient(135deg, #014421, #0b6d3a); /* gradasi hijau */
+    padding: 60px 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+  
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+  
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+  
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+  
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+}

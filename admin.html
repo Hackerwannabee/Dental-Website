@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Artikel</title>
+  <link rel="stylesheet" href="css/article.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Tentang kami</a></li>
+        <li><a href="service.html">Servis</a></li>
+        <li><a href="product.html">Produk</a></li>
+        <li><a href="contact.html">Kontak Kami</a></li>
+        <li><a href="all-articles.php">Artikel</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content-box">
+    <h1>Post Artikel Baru</h1>
+    <form action="post-article.php" method="POST">
+      <input type="text" name="title" placeholder="Judul artikel" required><br><br>
+      <textarea name="content" placeholder="Konten artikel" rows="8" required></textarea><br><br>
+      <button type="submit">Kirim Artikel</button>
+    </form>
+  </div>
+</body>
+</html>

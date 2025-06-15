@@ -1,0 +1,483 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  box-shadow: 0 2px 20px rgb(0, 0, 0);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 15px;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav ul li a {
+  color:#005221;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  position: relative;
+}
+
+nav ul li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 4px;
+  background-color: rgba(0, 128, 0, 0.3);
+  border-radius: 2px;
+}
+
+.slideshow-container {
+  width: 100vw;               
+  height: 500px;             
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 3px;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+}
+
+.content-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: #02613d; 
+    font-size: 24px;
+    line-height: 1.7;
+}
+
+.service{
+    text-align: center;
+    font-size: xx-large;
+    color: #005221;
+}
+
+.service-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+.service-box {
+    width: 1140px;               
+    height: 215px;              
+    border-radius: 20px;        
+    overflow: hidden;          
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease;
+}
+  
+.service-box:hover {
+    transform: scale(1.02);    
+}
+  
+.service-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        
+    display: block;
+}
+
+.product{
+    text-align: center;
+    font-size: xx-large;
+    color: #005221;
+}
+
+.product-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 20px;
+    background: #f7f8ec; /* warna background seperti gambar */
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    flex-wrap: wrap;
+}
+  
+.product-item {
+    text-align: center;
+}
+  
+.product-item img {
+    width: 295px;
+    height: auto;
+    margin-bottom: 10px;
+}
+  
+.product-item p {
+    color: #024b20;
+    font-weight: 500;
+    font-family: Arial, sans-serif;
+}
+
+.testimonial-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-image: url("/assets/images/testibg.jpg");
+    background-size: cover;          /* cover entire area */
+    background-position: center;     /* center the image */
+    background-repeat: no-repeat;
+    background-attachment: fixed;    /* optional: makes it scroll at a different speed */
+    color: white;                    /* change text color for better contrast */
+}
+
+.testimonial-title {
+    font-size: 32px;
+    color: #024b20;
+    margin-bottom: 40px;
+}
+  
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+  
+.testimonial-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 30px 20px;
+    max-width: 300px;
+    text-align: center;
+}
+  
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+  
+.testimonial-card h3 {
+    color: #024b20;
+    margin-bottom: 5px;
+}
+  
+.specialization {
+    font-style: italic;
+    color: #024b20;
+    margin-bottom: 15px;
+}
+  
+.testimonial-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+  
+.footer {
+    background: linear-gradient(135deg, #014421, #0b6d3a); /* gradasi hijau */
+    padding: 60px 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+  
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+  
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+  
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+  
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+  .sidebar {
+    display: none;
+  }
+}/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container untuk semua konten */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Judul utama */
+h1 {
+    text-align: center;
+    color: #007f5f;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Kotak artikel */
+.article-card {
+    background-color: white;
+    padding: 20px;
+    border-left: 5px solid #007f5f;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Judul artikel */
+.article-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #007f5f;
+    font-size: 20px;
+}
+
+/* Isi artikel */
+.article-card p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Tanggal artikel */
+.article-card .date {
+    font-size: 12px;
+    color: #777;
+    display: block;
+    margin-top: 5px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #007f5f;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.button-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.post-button {
+    background-color: #007f5f;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.post-button:hover {
+    background-color: #005f47;
+}
+
+.article-card {
+    background-color: white;
+    padding: 20px;
+    border-left: 5px solid #007f5f;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.article-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #007f5f;
+    font-size: 20px;
+}
+
+.article-card p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.article-card .date {
+    font-size: 12px;
+    color: #777;
+    display: block;
+    margin-top: 5px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #007f5f;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.button-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.post-button {
+    background-color: #007f5f;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.post-button:hover {
+    background-color: #005f47;
+}
+
+.article-card {
+    background-color: white;
+    padding: 20px;
+    border-left: 5px solid #007f5f;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.article-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #007f5f;
+    font-size: 20px;
+}
+
+.article-card p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.article-card .date {
+    font-size: 12px;
+    color: #777;
+    display: block;
+    margin-top: 5px;
+}
