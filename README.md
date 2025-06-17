@@ -11,6 +11,7 @@ Website BiDen memiliki beberapa fitur utama sebagai berikut:
 - **Produk**: Menampilkan berbagai produk yang kami sediakan beserta kegunaan dan harganya.
 - **Kontak**: Menyediakan informasi tentang alamat klinik, nomor telepon, dan email untuk pertanyaan lebih lanjut.
 - **Artikel**: Menyediakan berbagai artikel kesehatan gigi untuk memberikan edukasi kepada pasien.
+- **Buat Janji Temu**: Fitur untuk memudahkan pasien membuat janji temu dengan dokter gigi.
 
 ## Teknologi yang Digunakan
 - **HTML** untuk struktur dasar halaman.
